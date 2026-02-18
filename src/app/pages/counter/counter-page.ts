@@ -2,12 +2,17 @@ import { Component } from '@angular/core';
 
 @Component({
     template:`
-    <h1> Hola gato</h1>
-    <h2>CounterComponent Page</h2>
+    <h1>Counter: {{ counter}} </h1>
+   <button (click) ="incremento(1)">+1</button>
     `
 })
 
 
 export class CounterPage {
+
+    counter = 20;
+    incremento(value: number) {
+        this.counter += value;
+    }
 
 }
