@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { ChangeDetectionStrategy, Component, signal } from '@angular/core';
 
 @Component({
    templateUrl: './counter-page.html',
@@ -8,7 +8,8 @@ import { Component, signal } from '@angular/core';
         margin: 5px 10px;
         width: 75px;
     }
-   `
+   `,
+   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 
 
